@@ -6,6 +6,9 @@
 - [x] Generate 4 vehicle images matching the aurora art direction
 - [x] Reserve a visible slot for a future LLM chat assistant ("Ask my resume")
 - [x] Set per-route head metadata (title, description, og tags)
-- [ ] Replace placeholder content with Amir's real details: job titles, dates, achievements, education, email, phone, LinkedIn — waiting on user
+- [x] Employment periods: Volvo Cars 2015–2019, Volvo Trucks 2019–2022, Scania 2022–2023, Voi 2023–2025, Scania 2025–present (two Scania entries)
+- [x] Read Amir's LinkedIn profile (via indexed snapshot — LinkedIn itself blocks fetching) and apply verified titles
+- [ ] Confirm with Amir: name spelling Askari vs Asgari, location Stockholm vs Göteborg, current employer wording (Scania vs TRATON Group), Voi end date
+- [ ] Titles + achievements for Volvo Cars, Volvo Trucks, Scania 2022–2023; education; email; phone; CV PDF
 - [ ] Add the LLM chat assistant — later phase, waiting on user
 - [x] Scania Super image shows two cabs — regenerated as one clean tractor unit

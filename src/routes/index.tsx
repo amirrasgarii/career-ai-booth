@@ -9,13 +9,13 @@ import vehicleScooter from "@/assets/vehicle-scooter.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Amir Asgari — Vehicle & Mobility Industry Resume" },
+      { title: "Amir Asgari — Senior Embedded System Engineer" },
       {
         name: "description",
         content:
-          "Resume of Amir Asgari: experience across Volvo Cars, Volvo Trucks, Scania and Voi — from passenger cars and heavy trucks to electric micromobility.",
+          "Resume of Amir Asgari, Senior Embedded System Engineer: 10+ years across Volvo Cars, Volvo Trucks, Scania, Voi and TRATON Group — automotive software and electric micromobility.",
       },
-      { property: "og:title", content: "Amir Asgari — Vehicle & Mobility Industry Resume" },
+      { property: "og:title", content: "Amir Asgari — Senior Embedded System Engineer" },
       {
         property: "og:description",
         content:
@@ -37,6 +37,7 @@ type Experience = {
   vehicle: string;
   vehicleAlt: string;
   accent: "accent" | "accent-2";
+  current?: boolean;
   bullets: string[];
 };
 
@@ -44,11 +45,11 @@ const EXPERIENCES: Experience[] = [
   {
     company: "Volvo Cars",
     role: "Role title here",
-    period: "20XX — 20XX",
+    period: "2015 — 2019",
     location: "Göteborg · Passenger vehicles",
-    focus: "Cars",
+    focus: "XC40",
     vehicle: vehicleCar,
-    vehicleAlt: "Premium electric SUV, side profile",
+    vehicleAlt: "Volvo XC40 compact SUV, side profile",
     accent: "accent",
     bullets: [
       "Impact statement one — replace with your real achievement.",
@@ -59,7 +60,7 @@ const EXPERIENCES: Experience[] = [
   {
     company: "Volvo Trucks",
     role: "Role title here",
-    period: "20XX — 20XX",
+    period: "2019 — 2022",
     location: "Göteborg · Commercial vehicles",
     focus: "Trucks",
     vehicle: vehicleTruck,
@@ -74,7 +75,7 @@ const EXPERIENCES: Experience[] = [
   {
     company: "Scania",
     role: "Role title here",
-    period: "20XX — 20XX",
+    period: "2022 — 2023",
     location: "Södertälje · Heavy trucks",
     focus: "Super",
     vehicle: vehicleScania,
@@ -88,13 +89,29 @@ const EXPERIENCES: Experience[] = [
   },
   {
     company: "Voi",
-    role: "Role title here",
-    period: "20XX — 20XX",
+    role: "Senior Embedded Software Engineer",
+    period: "2023 — 2025",
     location: "Stockholm · Electric micromobility",
     focus: "Scooters",
     vehicle: vehicleScooter,
     vehicleAlt: "Electric kick scooter, side profile",
     accent: "accent-2",
+    bullets: [
+      "Impact statement one — replace with your real achievement.",
+      "Impact statement two — replace with your real achievement.",
+      "Impact statement three — replace with your real achievement.",
+    ],
+  },
+  {
+    company: "Scania",
+    role: "Senior Embedded System Engineer",
+    period: "2025 — Present",
+    location: "Södertälje · Heavy trucks (TRATON Group)",
+    focus: "Super",
+    vehicle: vehicleScania,
+    vehicleAlt: "Scania Super high-line truck, side profile",
+    accent: "accent",
+    current: true,
     bullets: [
       "Impact statement one — replace with your real achievement.",
       "Impact statement two — replace with your real achievement.",
@@ -162,7 +179,7 @@ function ExperienceSwitcher() {
               const isActive = i === active;
               return (
                 <button
-                  key={exp.company}
+                  key={`${exp.company}-${i}`}
                   role="tab"
                   aria-selected={isActive}
                   onClick={() => setActive(i)}
@@ -174,7 +191,11 @@ function ExperienceSwitcher() {
                 >
                   <span
                     className={`mr-2 inline-block size-1.5 rounded-full align-middle transition-colors ${
-                      isActive ? "bg-accent" : "bg-faint group-hover:bg-muted"
+                      exp.current
+                        ? "glow-pulse bg-accent"
+                        : isActive
+                          ? "bg-accent"
+                          : "bg-faint group-hover:bg-muted"
                     }`}
                   />
                   {exp.company}
@@ -233,6 +254,12 @@ function ExperienceSwitcher() {
             <span className="tick-in font-mono text-[11px] uppercase tracking-[0.2em] text-faint">
               {current.company}
             </span>
+            {current.current ? (
+              <span className="tick-in inline-flex items-center gap-2 rounded-full border border-accent/40 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.2em] text-accent">
+                <span className="glow-pulse size-1 rounded-full bg-accent shadow-[0_0_8px] shadow-accent/70" />
+                Current role
+              </span>
+            ) : null}
           </div>
           <h3
             className="rise-in mt-3 font-display text-4xl font-medium tracking-tight"
@@ -314,11 +341,11 @@ function Index() {
               style={{ animationDelay: "160ms" }}
             >
               <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-accent">
-                Vehicle &amp; Mobility Industry
+                Senior Embedded System Engineer
               </p>
               <p className="mt-4 max-w-[42ch] text-pretty text-lg text-foreground/85">
-                Experience across Swedish mobility — from passenger cars and
-                heavy trucks to the last electric mile.
+                Embedded software across Swedish mobility — from passenger cars
+                and heavy trucks to the last electric mile.
               </p>
             </div>
             <div
@@ -339,9 +366,9 @@ function Index() {
               </div>
               <div className="text-right">
                 <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-faint">
-                  Focus
+                  In industry
                 </div>
-                <div className="mt-1 text-sm">Vehicles</div>
+                <div className="mt-1 text-sm">2015 — now</div>
               </div>
             </div>
           </div>
@@ -415,10 +442,12 @@ function Index() {
                 +46 70 000 00 00
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/amir-askari-67bb0b8b/"
+                target="_blank"
+                rel="noreferrer"
                 className="text-foreground/80 transition-colors hover:text-accent"
               >
-                linkedin/in/amir-asgari
+                linkedin.com/in/amir-askari
               </a>
             </div>
             <a
