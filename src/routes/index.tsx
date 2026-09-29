@@ -336,7 +336,7 @@ function Index() {
           >
             AMIR
             <br />
-            ASGARI
+            ASKARI
           </h1>
           <div className="mt-10 grid grid-cols-12 items-end gap-6">
             <div
@@ -397,6 +397,11 @@ function Index() {
                       {edu.degree}
                     </div>
                     <div className="mt-1 text-sm text-muted">{edu.school}</div>
+                    {edu.note ? (
+                      <p className="mt-3 max-w-[54ch] text-xs leading-relaxed text-faint">
+                        {edu.note}
+                      </p>
+                    ) : null}
                   </div>
                   <span className="font-mono text-[11px] tracking-[0.2em] text-faint">
                     {edu.period}
@@ -433,10 +438,10 @@ function Index() {
           <div className="flex flex-col justify-between gap-8 md:flex-row md:items-center">
             <div className="flex flex-wrap gap-x-10 gap-y-3 font-mono text-[12px] tracking-[0.1em]">
               <a
-                href="mailto:amir.asgari@example.com"
+                href="mailto:amir.askari@example.com"
                 className="text-foreground/80 transition-colors hover:text-accent"
               >
-                amir.asgari@example.com
+                amir.askari@example.com
               </a>
               <a
                 href="tel:+46700000000"
@@ -461,7 +466,7 @@ function Index() {
             </a>
           </div>
           <div className="mt-10 flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.25em] text-faint">
-            <span>© 2026 A. Asgari</span>
+            <span>© 2026 A. Askari</span>
             <span className="h-px flex-1 bg-border" />
             <span>Printed spec · v1</span>
           </div>
