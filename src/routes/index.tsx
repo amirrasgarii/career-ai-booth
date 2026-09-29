@@ -318,7 +318,7 @@ function Index() {
               </p>
               <p className="mt-4 max-w-[42ch] text-pretty text-lg text-foreground/85">
                 Experience across Swedish mobility — from passenger cars and
-                heavy trucks to buses and the last electric mile.
+                heavy trucks to the last electric mile.
               </p>
             </div>
             <div
