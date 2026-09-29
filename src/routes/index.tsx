@@ -137,7 +137,7 @@ function SectionHeading({
 
 function ExperienceSwitcher() {
   const [active, setActive] = useState(0);
-  const current = EXPERIENCES[active];
+  const current = EXPERIENCES[active] ?? EXPERIENCES[0]!;
   const accentText =
     current.accent === "accent" ? "text-accent" : "text-accent-2";
   const accentBg = current.accent === "accent" ? "bg-accent" : "bg-accent-2";
