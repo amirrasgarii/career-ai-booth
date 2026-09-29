@@ -9,13 +9,13 @@ import vehicleScooter from "@/assets/vehicle-scooter.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Amir Asgari — Vehicle & Mobility Industry Resume" },
+      { title: "Amir Asgari — Senior Embedded System Engineer" },
       {
         name: "description",
         content:
           "Resume of Amir Asgari, Senior Embedded System Engineer: 10+ years across Volvo Cars, Volvo Trucks, Scania, Voi and TRATON Group — automotive software and electric micromobility.",
       },
-      { property: "og:title", content: "Amir Asgari — Vehicle & Mobility Industry Resume" },
+      { property: "og:title", content: "Amir Asgari — Senior Embedded System Engineer" },
       {
         property: "og:description",
         content:
@@ -341,11 +341,11 @@ function Index() {
               style={{ animationDelay: "160ms" }}
             >
               <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-accent">
-                Vehicle &amp; Mobility Industry
+                Senior Embedded System Engineer
               </p>
               <p className="mt-4 max-w-[42ch] text-pretty text-lg text-foreground/85">
-                Experience across Swedish mobility — from passenger cars and
-                heavy trucks to the last electric mile.
+                Embedded software across Swedish mobility — from passenger cars
+                and heavy trucks to the last electric mile.
               </p>
             </div>
             <div
