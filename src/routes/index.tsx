@@ -9,13 +9,13 @@ import vehicleScooter from "@/assets/vehicle-scooter.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Amir Asgari — Senior Embedded System Engineer" },
+      { title: "Amir Askari — Senior Embedded System Engineer" },
       {
         name: "description",
         content:
-          "Resume of Amir Asgari, Senior Embedded System Engineer: 10+ years across Volvo Cars, Volvo Trucks, Scania, Voi and TRATON Group — automotive software and electric micromobility.",
+          "Resume of Amir Askari, Senior Embedded System Engineer: 10+ years across Volvo Cars, Volvo Trucks, Scania and Voi — automotive software and electric micromobility.",
       },
-      { property: "og:title", content: "Amir Asgari — Senior Embedded System Engineer" },
+      { property: "og:title", content: "Amir Askari — Senior Embedded System Engineer" },
       {
         property: "og:description",
         content:
@@ -106,7 +106,7 @@ const EXPERIENCES: Experience[] = [
     company: "Scania",
     role: "Senior Embedded System Engineer",
     period: "2025 — Present",
-    location: "Södertälje · Heavy trucks (TRATON Group)",
+    location: "Södertälje · Heavy trucks",
     focus: "Super",
     vehicle: vehicleScania,
     vehicleAlt: "Scania Super high-line truck, side profile",
@@ -120,16 +120,19 @@ const EXPERIENCES: Experience[] = [
   },
 ];
 
-const EDUCATION = [
+type Education = {
+  degree: string;
+  school: string;
+  period: string;
+  note?: string;
+};
+
+const EDUCATION: Education[] = [
   {
-    degree: "Degree title here",
-    school: "University name here",
-    period: "20XX — 20XX",
-  },
-  {
-    degree: "Degree title here",
-    school: "University name here",
-    period: "20XX — 20XX",
+    degree: "Master of Science (MSc)",
+    school: "Chalmers University of Technology",
+    period: "2016",
+    note: "Master's thesis: Using High-Speed Sampling for Evaluating Sensor Signals for Fuel Estimation in Common-Rail Injection Systems — carried out with Volvo Group Trucks Technology.",
   },
 ];
 
@@ -302,11 +305,11 @@ function Index() {
           <div className="flex items-center gap-3">
             <span className="glow-pulse size-2 rounded-full bg-accent shadow-[0_0_12px] shadow-accent/70" />
             <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-muted">
-              A. Asgari — Mobility
+              A. Askari — Mobility
             </span>
           </div>
           <div className="flex items-center gap-6 font-mono text-[11px] uppercase tracking-[0.15em]">
-            <span className="hidden text-faint sm:inline">Göteborg · SE</span>
+            <span className="hidden text-faint sm:inline">Stockholm · SE</span>
             <a
               href="#contact"
               className="text-foreground/80 transition-colors hover:text-accent"
@@ -333,7 +336,7 @@ function Index() {
           >
             AMIR
             <br />
-            ASGARI
+            ASKARI
           </h1>
           <div className="mt-10 grid grid-cols-12 items-end gap-6">
             <div
@@ -356,7 +359,7 @@ function Index() {
                 <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-faint">
                   Location
                 </div>
-                <div className="mt-1 text-sm">Göteborg, SE</div>
+                <div className="mt-1 text-sm">Stockholm, SE</div>
               </div>
               <div className="text-right">
                 <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-faint">
@@ -394,6 +397,11 @@ function Index() {
                       {edu.degree}
                     </div>
                     <div className="mt-1 text-sm text-muted">{edu.school}</div>
+                    {edu.note ? (
+                      <p className="mt-3 max-w-[54ch] text-xs leading-relaxed text-faint">
+                        {edu.note}
+                      </p>
+                    ) : null}
                   </div>
                   <span className="font-mono text-[11px] tracking-[0.2em] text-faint">
                     {edu.period}
@@ -430,10 +438,10 @@ function Index() {
           <div className="flex flex-col justify-between gap-8 md:flex-row md:items-center">
             <div className="flex flex-wrap gap-x-10 gap-y-3 font-mono text-[12px] tracking-[0.1em]">
               <a
-                href="mailto:amir.asgari@example.com"
+                href="mailto:amir.askari@example.com"
                 className="text-foreground/80 transition-colors hover:text-accent"
               >
-                amir.asgari@example.com
+                amir.askari@example.com
               </a>
               <a
                 href="tel:+46700000000"
@@ -458,7 +466,7 @@ function Index() {
             </a>
           </div>
           <div className="mt-10 flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.25em] text-faint">
-            <span>© 2026 A. Asgari</span>
+            <span>© 2026 A. Askari</span>
             <span className="h-px flex-1 bg-border" />
             <span>Printed spec · v1</span>
           </div>
