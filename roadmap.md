@@ -8,3 +8,4 @@
 - [x] Set per-route head metadata (title, description, og tags)
 - [ ] Replace placeholder content with Amir's real details: job titles, dates, achievements, education, email, phone, LinkedIn — waiting on user
 - [ ] Add the LLM chat assistant — later phase, waiting on user
+- [ ] Scania Super image shows two cabs — regenerate as one clean tractor unit
