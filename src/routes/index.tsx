@@ -357,9 +357,9 @@ function Index() {
           <div className="col-span-12 md:col-span-6">
             <SectionHeading marker="b" label="Education" />
             <div className="space-y-6">
-              {EDUCATION.map((edu) => (
+              {EDUCATION.map((edu, i) => (
                 <div
-                  key={edu.degree + edu.period}
+                  key={i}
                   className="flex items-baseline justify-between gap-4 border-b border-border pb-4"
                 >
                   <div>
