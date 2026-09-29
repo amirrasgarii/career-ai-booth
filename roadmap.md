@@ -7,7 +7,8 @@
 - [x] Reserve a visible slot for a future LLM chat assistant ("Ask my resume")
 - [x] Set per-route head metadata (title, description, og tags)
 - [x] Employment periods: Volvo Cars 2015–2019, Volvo Trucks 2019–2022, Scania 2022–2023, Voi 2023–2025, Scania 2025–present (two Scania entries)
-- [ ] Read Amir's LinkedIn page (linkedin.com/in/amir-askari-67bb0b8b) and fill in real titles, dates, achievements
-- [ ] Replace remaining placeholders: job titles, achievements, education, email, phone, LinkedIn URL, CV PDF — waiting on user
+- [x] Read Amir's LinkedIn profile (via indexed snapshot — LinkedIn itself blocks fetching) and apply verified titles
+- [ ] Confirm with Amir: name spelling Askari vs Asgari, location Stockholm vs Göteborg, current employer wording (Scania vs TRATON Group), Voi end date
+- [ ] Titles + achievements for Volvo Cars, Volvo Trucks, Scania 2022–2023; education; email; phone; CV PDF
 - [ ] Add the LLM chat assistant — later phase, waiting on user
 - [x] Scania Super image shows two cabs — regenerated as one clean tractor unit
