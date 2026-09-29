@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Resume of Amir Asgari: experience across Volvo Cars, Volvo Trucks, Scania and Voi — from passenger cars and heavy trucks to electric micromobility.",
+          "Resume of Amir Asgari, Senior Embedded System Engineer: 10+ years across Volvo Cars, Volvo Trucks, Scania, Voi and TRATON Group — automotive software and electric micromobility.",
       },
       { property: "og:title", content: "Amir Asgari — Vehicle & Mobility Industry Resume" },
       {
@@ -89,7 +89,7 @@ const EXPERIENCES: Experience[] = [
   },
   {
     company: "Voi",
-    role: "Role title here",
+    role: "Senior Embedded Software Engineer",
     period: "2023 — 2025",
     location: "Stockholm · Electric micromobility",
     focus: "Scooters",
@@ -104,9 +104,9 @@ const EXPERIENCES: Experience[] = [
   },
   {
     company: "Scania",
-    role: "Role title here",
+    role: "Senior Embedded System Engineer",
     period: "2025 — Present",
-    location: "Södertälje · Heavy trucks",
+    location: "Södertälje · Heavy trucks (TRATON Group)",
     focus: "Super",
     vehicle: vehicleScania,
     vehicleAlt: "Scania Super high-line truck, side profile",
@@ -442,10 +442,12 @@ function Index() {
                 +46 70 000 00 00
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/amir-askari-67bb0b8b/"
+                target="_blank"
+                rel="noreferrer"
                 className="text-foreground/80 transition-colors hover:text-accent"
               >
-                linkedin/in/amir-asgari
+                linkedin.com/in/amir-askari
               </a>
             </div>
             <a
