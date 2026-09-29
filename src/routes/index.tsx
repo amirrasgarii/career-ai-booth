@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import vehicleCar from "@/assets/vehicle-car.png";
 import vehicleTruck from "@/assets/vehicle-truck.png";
-import vehicleBus from "@/assets/vehicle-bus.png";
+import vehicleScania from "@/assets/vehicle-scania.png";
 import vehicleScooter from "@/assets/vehicle-scooter.png";
 
 export const Route = createFileRoute("/")({
@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Resume of Amir Asgari: experience across Volvo Cars, Volvo Trucks, Scania and Voi — from passenger cars and heavy trucks to buses and electric micromobility.",
+          "Resume of Amir Asgari: experience across Volvo Cars, Volvo Trucks, Scania and Voi — from passenger cars and heavy trucks to electric micromobility.",
       },
       { property: "og:title", content: "Amir Asgari — Vehicle & Mobility Industry Resume" },
       {
@@ -75,10 +75,10 @@ const EXPERIENCES: Experience[] = [
     company: "Scania",
     role: "Role title here",
     period: "20XX — 20XX",
-    location: "Södertälje · Buses & heavy vehicles",
-    focus: "Buses",
-    vehicle: vehicleBus,
-    vehicleAlt: "Modern city bus, side profile",
+    location: "Södertälje · Heavy trucks",
+    focus: "Super",
+    vehicle: vehicleScania,
+    vehicleAlt: "Scania Super high-line truck, side profile",
     accent: "accent",
     bullets: [
       "Impact statement one — replace with your real achievement.",
