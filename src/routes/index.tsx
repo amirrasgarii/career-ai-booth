@@ -37,6 +37,7 @@ type Experience = {
   vehicle: string;
   vehicleAlt: string;
   accent: "accent" | "accent-2";
+  current?: boolean;
   bullets: string[];
 };
 
@@ -44,11 +45,11 @@ const EXPERIENCES: Experience[] = [
   {
     company: "Volvo Cars",
     role: "Role title here",
-    period: "20XX — 20XX",
+    period: "2015 — 2019",
     location: "Göteborg · Passenger vehicles",
-    focus: "Cars",
+    focus: "XC40",
     vehicle: vehicleCar,
-    vehicleAlt: "Premium electric SUV, side profile",
+    vehicleAlt: "Volvo XC40 compact SUV, side profile",
     accent: "accent",
     bullets: [
       "Impact statement one — replace with your real achievement.",
@@ -59,7 +60,7 @@ const EXPERIENCES: Experience[] = [
   {
     company: "Volvo Trucks",
     role: "Role title here",
-    period: "20XX — 20XX",
+    period: "2019 — 2022",
     location: "Göteborg · Commercial vehicles",
     focus: "Trucks",
     vehicle: vehicleTruck,
@@ -74,7 +75,7 @@ const EXPERIENCES: Experience[] = [
   {
     company: "Scania",
     role: "Role title here",
-    period: "20XX — 20XX",
+    period: "2022 — 2023",
     location: "Södertälje · Heavy trucks",
     focus: "Super",
     vehicle: vehicleScania,
@@ -89,12 +90,28 @@ const EXPERIENCES: Experience[] = [
   {
     company: "Voi",
     role: "Role title here",
-    period: "20XX — 20XX",
+    period: "2023 — 2025",
     location: "Stockholm · Electric micromobility",
     focus: "Scooters",
     vehicle: vehicleScooter,
     vehicleAlt: "Electric kick scooter, side profile",
     accent: "accent-2",
+    bullets: [
+      "Impact statement one — replace with your real achievement.",
+      "Impact statement two — replace with your real achievement.",
+      "Impact statement three — replace with your real achievement.",
+    ],
+  },
+  {
+    company: "Scania",
+    role: "Role title here",
+    period: "2025 — Present",
+    location: "Södertälje · Heavy trucks",
+    focus: "Super",
+    vehicle: vehicleScania,
+    vehicleAlt: "Scania Super high-line truck, side profile",
+    accent: "accent",
+    current: true,
     bullets: [
       "Impact statement one — replace with your real achievement.",
       "Impact statement two — replace with your real achievement.",
@@ -162,7 +179,7 @@ function ExperienceSwitcher() {
               const isActive = i === active;
               return (
                 <button
-                  key={exp.company}
+                  key={`${exp.company}-${i}`}
                   role="tab"
                   aria-selected={isActive}
                   onClick={() => setActive(i)}
