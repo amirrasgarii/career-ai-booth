@@ -366,9 +366,9 @@ function Index() {
               </div>
               <div className="text-right">
                 <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-faint">
-                  Focus
+                  In industry
                 </div>
-                <div className="mt-1 text-sm">Vehicles</div>
+                <div className="mt-1 text-sm">2015 — now</div>
               </div>
             </div>
           </div>
