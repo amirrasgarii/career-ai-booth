@@ -191,7 +191,11 @@ function ExperienceSwitcher() {
                 >
                   <span
                     className={`mr-2 inline-block size-1.5 rounded-full align-middle transition-colors ${
-                      isActive ? "bg-accent" : "bg-faint group-hover:bg-muted"
+                      exp.current
+                        ? "glow-pulse bg-accent"
+                        : isActive
+                          ? "bg-accent"
+                          : "bg-faint group-hover:bg-muted"
                     }`}
                   />
                   {exp.company}
@@ -250,6 +254,12 @@ function ExperienceSwitcher() {
             <span className="tick-in font-mono text-[11px] uppercase tracking-[0.2em] text-faint">
               {current.company}
             </span>
+            {current.current ? (
+              <span className="tick-in inline-flex items-center gap-2 rounded-full border border-accent/40 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.2em] text-accent">
+                <span className="glow-pulse size-1 rounded-full bg-accent shadow-[0_0_8px] shadow-accent/70" />
+                Current role
+              </span>
+            ) : null}
           </div>
           <h3
             className="rise-in mt-3 font-display text-4xl font-medium tracking-tight"
