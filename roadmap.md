@@ -12,5 +12,8 @@
 - [ ] Titles + achievements for Volvo Cars, Volvo Trucks, Scania 2022–2023; education; email; phone; CV PDF
 - [ ] Add the LLM chat assistant — later phase, waiting on user
 - [x] Scania Super image shows two cabs — regenerated as one clean tractor unit
-- [ ] Fill role titles for Volvo Cars, Volvo Trucks, Scania 2022-2023 (source: LinkedIn search or user-uploaded CV)
-- [ ] User may upload CV PDF — parse it and apply titles/achievements, wire Download CV button
+- [x] Fill role titles for Volvo Cars, Volvo Trucks, Scania 2022-2023 (source: CV PDF)
+- [x] CV PDF uploaded — titles + achievements applied; dates kept as user gave them
+- [x] Current Scania role: Lead Engineer, new AWS onboard/offboard calculation project (Python, AWS)
+- [ ] Wire Download CV button to the uploaded CV PDF
+- [ ] Confirm with Amir: hero headline still "Senior Embedded System Engineer" — keep or change to Lead Engineer
