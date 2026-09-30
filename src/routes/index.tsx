@@ -43,48 +43,19 @@ type Experience = {
 
 const EXPERIENCES: Experience[] = [
   {
-    company: "Volvo Cars",
-    role: "Embedded Software Engineer",
-    period: "2015 — 2019",
-    location: "Göteborg · Passenger vehicles",
-    focus: "XC40",
-    vehicle: vehicleCar,
-    vehicleAlt: "Volvo XC40 compact SUV, side profile",
-    accent: "accent",
-    bullets: [
-      "Designed, built and tested concepts from idea to functional prototype in cars and driving simulators.",
-      "Developed HMI for self-driving cars and VR simulators (C++, QML, Unity).",
-      "Contributed to UI/UX projects (DUX) and built electronics prototypes with Arduino and Raspberry Pi.",
-    ],
-  },
-  {
-    company: "Volvo Trucks",
-    role: "Embedded Software Engineer",
-    period: "2019 — 2022",
-    location: "Göteborg · Commercial vehicles",
-    focus: "Trucks",
-    vehicle: vehicleTruck,
-    vehicleAlt: "Heavy-duty semi truck with trailer, side profile",
-    accent: "accent-2",
-    bullets: [
-      "Designed, developed and tested software for transmission electronic control units (C++).",
-      "Contributed to the Volvo Powertrain platform framework and its software test framework.",
-      "Led planning activities for a scrum team.",
-    ],
-  },
-  {
     company: "Scania",
-    role: "Senior Embedded Software Engineer",
-    period: "2022 — 2023",
+    role: "Lead Engineer",
+    period: "2025 — Present",
     location: "Södertälje · Heavy trucks",
     focus: "Super",
     vehicle: vehicleScania,
     vehicleAlt: "Scania Super high-line truck, side profile",
     accent: "accent",
+    current: true,
     bullets: [
-      "Designed, developed and tested gear-selection software in the transmission ECU (MATLAB/Simulink, C).",
-      "Developed gear-selection scenarios across vehicle configurations.",
-      "Project responsible for the dual electric vehicle.",
+      "Lead engineer for a new onboard and offboard calculation project — started it from scratch and built it out on AWS.",
+      "Offboard/cloud calculation services in Python on AWS, alongside the onboard models (C, MATLAB/Simulink).",
+      "Own the architecture and delivery across vehicle and cloud, coordinating development activities.",
     ],
   },
   {
@@ -104,18 +75,47 @@ const EXPERIENCES: Experience[] = [
   },
   {
     company: "Scania",
-    role: "Senior Embedded System Engineer",
-    period: "2025 — Present",
+    role: "Senior Embedded Software Engineer",
+    period: "2022 — 2023",
     location: "Södertälje · Heavy trucks",
     focus: "Super",
     vehicle: vehicleScania,
     vehicleAlt: "Scania Super high-line truck, side profile",
     accent: "accent",
-    current: true,
     bullets: [
-      "Responsible for onboard and offboard range estimation (C, MATLAB/Simulink, AWS).",
-      "Developed vehicle-to-cloud communication architecture solutions.",
-      "Leading embedded software projects and coordinating development activities.",
+      "Designed, developed and tested gear-selection software in the transmission ECU (MATLAB/Simulink, C).",
+      "Developed gear-selection scenarios across vehicle configurations.",
+      "Project responsible for the dual electric vehicle.",
+    ],
+  },
+  {
+    company: "Volvo Trucks",
+    role: "Embedded Software Engineer",
+    period: "2019 — 2022",
+    location: "Göteborg · Commercial vehicles",
+    focus: "Trucks",
+    vehicle: vehicleTruck,
+    vehicleAlt: "Heavy-duty semi truck with trailer, side profile",
+    accent: "accent-2",
+    bullets: [
+      "Designed, developed and tested software for transmission electronic control units (C++).",
+      "Contributed to the Volvo Powertrain platform framework and its software test framework.",
+      "Led planning activities for a scrum team.",
+    ],
+  },
+  {
+    company: "Volvo Cars",
+    role: "Embedded Software Engineer",
+    period: "2015 — 2019",
+    location: "Göteborg · Passenger vehicles",
+    focus: "XC40",
+    vehicle: vehicleCar,
+    vehicleAlt: "Volvo XC40 compact SUV, side profile",
+    accent: "accent",
+    bullets: [
+      "Designed, built and tested concepts from idea to functional prototype in cars and driving simulators.",
+      "Developed HMI for self-driving cars and VR simulators (C++, QML, Unity).",
+      "Contributed to UI/UX projects (DUX) and built electronics prototypes with Arduino and Raspberry Pi.",
     ],
   },
 ];
@@ -247,11 +247,6 @@ function ExperienceSwitcher() {
             <div className="absolute left-4 top-4 font-mono text-[10px] uppercase tracking-[0.25em] text-faint">
               {String(active + 1).padStart(2, "0")} /{" "}
               {String(EXPERIENCES.length).padStart(2, "0")}
-            </div>
-            <div
-              className={`absolute right-4 top-4 font-mono text-[10px] uppercase tracking-[0.25em] ${accentText}`}
-            >
-              {current.focus}
             </div>
           </div>
         </div>
