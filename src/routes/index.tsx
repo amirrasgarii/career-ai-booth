@@ -104,7 +104,7 @@ const EXPERIENCES: Experience[] = [
   },
   {
     company: "Scania",
-    role: "Senior Embedded System Engineer",
+    role: "Lead Engineer",
     period: "2025 — Present",
     location: "Södertälje · Heavy trucks",
     focus: "Super",
@@ -113,9 +113,9 @@ const EXPERIENCES: Experience[] = [
     accent: "accent",
     current: true,
     bullets: [
-      "Responsible for onboard and offboard range estimation (C, MATLAB/Simulink, AWS).",
-      "Developed vehicle-to-cloud communication architecture solutions.",
-      "Leading embedded software projects and coordinating development activities.",
+      "Lead engineer for a new onboard and offboard calculation project — started it from scratch and built it out on AWS.",
+      "Offboard/cloud calculation services in Python on AWS, alongside the onboard models (C, MATLAB/Simulink).",
+      "Own the architecture and delivery across vehicle and cloud, coordinating development activities.",
     ],
   },
 ];
