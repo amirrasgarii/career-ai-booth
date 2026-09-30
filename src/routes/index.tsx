@@ -457,7 +457,7 @@ function Index() {
                 href="tel:+46732178527"
                 className="text-foreground/80 transition-colors hover:text-accent"
               >
-                +46 70 000 00 00
+                +46 73 217 85 27
               </a>
               <a
                 href="https://www.linkedin.com/in/amir-askari-67bb0b8b/"
