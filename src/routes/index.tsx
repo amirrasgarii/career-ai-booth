@@ -44,7 +44,7 @@ type Experience = {
 const EXPERIENCES: Experience[] = [
   {
     company: "Volvo Cars",
-    role: "Role title here",
+    role: "Embedded Software Engineer",
     period: "2015 — 2019",
     location: "Göteborg · Passenger vehicles",
     focus: "XC40",
@@ -52,14 +52,14 @@ const EXPERIENCES: Experience[] = [
     vehicleAlt: "Volvo XC40 compact SUV, side profile",
     accent: "accent",
     bullets: [
-      "Impact statement one — replace with your real achievement.",
-      "Impact statement two — replace with your real achievement.",
-      "Impact statement three — replace with your real achievement.",
+      "Designed, built and tested concepts from idea to functional prototype in cars and driving simulators.",
+      "Developed HMI for self-driving cars and VR simulators (C++, QML, Unity).",
+      "Contributed to UI/UX projects (DUX) and built electronics prototypes with Arduino and Raspberry Pi.",
     ],
   },
   {
     company: "Volvo Trucks",
-    role: "Role title here",
+    role: "Embedded Software Engineer",
     period: "2019 — 2022",
     location: "Göteborg · Commercial vehicles",
     focus: "Trucks",
@@ -67,14 +67,14 @@ const EXPERIENCES: Experience[] = [
     vehicleAlt: "Heavy-duty semi truck with trailer, side profile",
     accent: "accent-2",
     bullets: [
-      "Impact statement one — replace with your real achievement.",
-      "Impact statement two — replace with your real achievement.",
-      "Impact statement three — replace with your real achievement.",
+      "Designed, developed and tested software for transmission electronic control units (C++).",
+      "Contributed to the Volvo Powertrain platform framework and its software test framework.",
+      "Led planning activities for a scrum team.",
     ],
   },
   {
     company: "Scania",
-    role: "Role title here",
+    role: "Senior Embedded Software Engineer",
     period: "2022 — 2023",
     location: "Södertälje · Heavy trucks",
     focus: "Super",
@@ -82,9 +82,9 @@ const EXPERIENCES: Experience[] = [
     vehicleAlt: "Scania Super high-line truck, side profile",
     accent: "accent",
     bullets: [
-      "Impact statement one — replace with your real achievement.",
-      "Impact statement two — replace with your real achievement.",
-      "Impact statement three — replace with your real achievement.",
+      "Designed, developed and tested gear-selection software in the transmission ECU (MATLAB/Simulink, C).",
+      "Developed gear-selection scenarios across vehicle configurations.",
+      "Project responsible for the dual electric vehicle.",
     ],
   },
   {
@@ -97,9 +97,9 @@ const EXPERIENCES: Experience[] = [
     vehicleAlt: "Electric kick scooter, side profile",
     accent: "accent-2",
     bullets: [
-      "Impact statement one — replace with your real achievement.",
-      "Impact statement two — replace with your real achievement.",
-      "Impact statement three — replace with your real achievement.",
+      "Firmware engineering: embedded software design, development and testing for vehicle and IoT.",
+      "Implemented new vehicle/IoT features in C and Python on Zephyr RTOS.",
+      "Worked within CI-driven development for the scooter fleet.",
     ],
   },
   {
@@ -113,9 +113,9 @@ const EXPERIENCES: Experience[] = [
     accent: "accent",
     current: true,
     bullets: [
-      "Impact statement one — replace with your real achievement.",
-      "Impact statement two — replace with your real achievement.",
-      "Impact statement three — replace with your real achievement.",
+      "Responsible for onboard and offboard range estimation (C, MATLAB/Simulink, AWS).",
+      "Developed vehicle-to-cloud communication architecture solutions.",
+      "Leading embedded software projects and coordinating development activities.",
     ],
   },
 ];
@@ -129,10 +129,20 @@ type Education = {
 
 const EDUCATION: Education[] = [
   {
-    degree: "Master of Science (MSc)",
+    degree: "MSc, Embedded Electronic System Design",
     school: "Chalmers University of Technology",
-    period: "2016",
-    note: "Master's thesis: Using High-Speed Sampling for Evaluating Sensor Signals for Fuel Estimation in Common-Rail Injection Systems — carried out with Volvo Group Trucks Technology.",
+    period: "2014 — 2016",
+    note: "Master's thesis: Using high-speed sampling and DSP for evaluating sensor signals — Volvo Group Trucks Technology.",
+  },
+  {
+    degree: "MSc, Embedded and Intelligent Systems",
+    school: "Halmstad University",
+    period: "2013 — 2014",
+  },
+  {
+    degree: "BSc, Electrical Engineering",
+    school: "University of Zanjan, Iran",
+    period: "2008 — 2012",
   },
 ];
 
@@ -438,16 +448,16 @@ function Index() {
           <div className="flex flex-col justify-between gap-8 md:flex-row md:items-center">
             <div className="flex flex-wrap gap-x-10 gap-y-3 font-mono text-[12px] tracking-[0.1em]">
               <a
-                href="mailto:amir.askari@example.com"
+                href="mailto:amir.asgari@gmail.com"
                 className="text-foreground/80 transition-colors hover:text-accent"
               >
-                amir.askari@example.com
+                amir.asgari@gmail.com
               </a>
               <a
-                href="tel:+46700000000"
+                href="tel:+46732178527"
                 className="text-foreground/80 transition-colors hover:text-accent"
               >
-                +46 70 000 00 00
+                +46 73 217 85 27
               </a>
               <a
                 href="https://www.linkedin.com/in/amir-askari-67bb0b8b/"
