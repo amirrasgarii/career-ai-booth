@@ -12,3 +12,5 @@
 - [ ] Titles + achievements for Volvo Cars, Volvo Trucks, Scania 2022–2023; education; email; phone; CV PDF
 - [ ] Add the LLM chat assistant — later phase, waiting on user
 - [x] Scania Super image shows two cabs — regenerated as one clean tractor unit
+- [ ] Fill role titles for Volvo Cars, Volvo Trucks, Scania 2022-2023 (source: LinkedIn search or user-uploaded CV)
+- [ ] User may upload CV PDF — parse it and apply titles/achievements, wire Download CV button
