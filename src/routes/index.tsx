@@ -248,11 +248,6 @@ function ExperienceSwitcher() {
               {String(active + 1).padStart(2, "0")} /{" "}
               {String(EXPERIENCES.length).padStart(2, "0")}
             </div>
-            <div
-              className={`absolute right-4 top-4 font-mono text-[10px] uppercase tracking-[0.25em] ${accentText}`}
-            >
-              {current.focus}
-            </div>
           </div>
         </div>
 
