@@ -5,27 +5,6 @@ import vehicleCar from "@/assets/vehicle-car.png";
 import vehicleTruck from "@/assets/vehicle-truck.png";
 import vehicleScania from "@/assets/vehicle-scania.png";
 import vehicleScooter from "@/assets/vehicle-scooter.png";
-import scania360_1 from "@/assets/scania-360-1.png";
-import scania360_2 from "@/assets/scania-360-2.png";
-import scania360_3 from "@/assets/scania-360-3.png";
-import scania360_4 from "@/assets/scania-360-4.png";
-import scania360_5 from "@/assets/scania-360-5.png";
-import scania360_6 from "@/assets/scania-360-6.png";
-import scania360_7 from "@/assets/scania-360-7.png";
-import scania360_8 from "@/assets/scania-360-8.png";
-import { VehicleStage } from "@/components/VehicleStage";
-
-/** Eight angles of the Scania, left to right around a turntable. */
-const SCANIA_360 = [
-  scania360_1,
-  scania360_2,
-  scania360_3,
-  scania360_4,
-  scania360_5,
-  scania360_6,
-  scania360_7,
-  scania360_8,
-];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -57,7 +36,6 @@ type Experience = {
   focus: string;
   vehicle: string;
   vehicleAlt: string;
-  frames?: string[];
   accent: "accent" | "accent-2";
   current?: boolean;
   bullets: string[];
@@ -72,7 +50,6 @@ const EXPERIENCES: Experience[] = [
     focus: "Super",
     vehicle: vehicleScania,
     vehicleAlt: "Scania Super high-line truck, side profile",
-    frames: SCANIA_360,
     accent: "accent",
     current: true,
     bullets: [
@@ -104,7 +81,6 @@ const EXPERIENCES: Experience[] = [
     focus: "Super",
     vehicle: vehicleScania,
     vehicleAlt: "Scania Super high-line truck, side profile",
-    frames: SCANIA_360,
     accent: "accent",
     bullets: [
       "Designed, developed and tested gear-selection software in the transmission ECU (MATLAB/Simulink, C).",
@@ -247,12 +223,32 @@ function ExperienceSwitcher() {
 
         {/* vehicle turntable */}
         <div className="col-span-12 md:col-span-9 lg:col-span-5">
-          <VehicleStage
-            entry={current}
-            active={active}
-            position={active + 1}
-            total={EXPERIENCES.length}
-          />
+          <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl border border-border glass">
+            {/* turntable rings */}
+            <div className="pointer-events-none absolute inset-0 grid place-items-center">
+              <div className="turntable-spin size-[78%] rounded-full border border-dashed border-border" />
+              <div className="absolute size-[58%] rounded-full border border-border/60" />
+              <div
+                className={`absolute bottom-[18%] h-6 w-[70%] rounded-[100%] blur-xl transition-colors duration-700 ${
+                  current.accent === "accent" ? "bg-accent/20" : "bg-accent-2/20"
+                }`}
+              />
+            </div>
+            {/* the vehicle rotates in on every switch */}
+            <img
+              key={active}
+              src={current.vehicle}
+              alt={current.vehicleAlt}
+              width={1024}
+              height={768}
+              loading={active === 0 ? "eager" : "lazy"}
+              className="vehicle-enter relative z-10 w-[88%] drop-shadow-[0_24px_40px_rgba(0,0,0,0.55)]"
+            />
+            <div className="absolute left-4 top-4 font-mono text-[10px] uppercase tracking-[0.25em] text-faint">
+              {String(active + 1).padStart(2, "0")} /{" "}
+              {String(EXPERIENCES.length).padStart(2, "0")}
+            </div>
+          </div>
         </div>
 
         {/* role details — re-animates on switch */}
