@@ -17,5 +17,6 @@
 - [x] Current Scania role: Lead Engineer, new AWS onboard/offboard calculation project (Python, AWS)
 - [x] Reorder experience newest-first, current job open by default
 - [x] Remove the name/branding visible on the vehicle image (label overlay + lettering on car/truck/Scania)
+- [ ] True 360 spin: 8 angle frames per vehicle + drag-to-turn (Scania as the test, then the others)
 - [ ] Wire Download CV button to the uploaded CV PDF
 - [ ] Confirm with Amir: hero headline still "Senior Embedded System Engineer" — keep or change to Lead Engineer
