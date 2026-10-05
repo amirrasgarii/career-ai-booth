@@ -65,7 +65,7 @@ const bodySchema = z.object({
 });
 
 export async function handleChat(request: Request) {
-  const apiKey = process.env.LOVABLE_API_KEY;
+  const apiKey = process.env["LOVABLE_API_KEY"];
   if (!apiKey) {
     return Response.json(
       { error: "The AI assistant is not configured yet. Please try again later." },

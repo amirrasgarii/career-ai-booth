@@ -5,6 +5,7 @@ import vehicleCar from "@/assets/vehicle-car.png";
 import vehicleTruck from "@/assets/vehicle-truck.png";
 import vehicleScania from "@/assets/vehicle-scania.png";
 import vehicleScooter from "@/assets/vehicle-scooter.png";
+import { ResumeAssistant } from "@/components/ResumeAssistant";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -416,23 +417,10 @@ function Index() {
             </div>
           </div>
 
-          {/* reserved assistant slot */}
+          {/* ask-my-resume assistant */}
           <div className="col-span-12 md:col-span-6">
-            <SectionHeading marker="c" label="Assistant" />
-            <div className="glass grid min-h-[220px] place-items-center rounded-2xl border border-border p-6 text-center">
-              <div>
-                <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-faint">
-                  Coming soon
-                </div>
-                <div className="mt-3 font-display text-2xl tracking-tight text-foreground/70">
-                  Ask my resume
-                </div>
-                <p className="mx-auto mt-2 max-w-[30ch] text-sm text-muted">
-                  A conversational assistant will answer questions about this CV
-                  here.
-                </p>
-              </div>
-            </div>
+            <SectionHeading marker="c" label="Assistant" trailing="Live" />
+            <ResumeAssistant />
           </div>
         </div>
       </section>
