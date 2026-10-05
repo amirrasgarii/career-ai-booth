@@ -117,19 +117,25 @@ export function ResumeAssistant() {
               </div>
             </ConversationEmptyState>
           ) : (
-            messages.map((message) => (
-              <Message from={message.role} key={message.id}>
-                <MessageContent
-                  className={
-                    message.role === "user"
-                      ? "group-[.is-user]:bg-accent group-[.is-user]:text-background"
-                      : ""
-                  }
-                >
-                  <MessageResponse>{message.parts}</MessageResponse>
-                </MessageContent>
-              </Message>
-            ))
+            messages.map((message) => {
+              const text = message.parts
+                .filter((part) => part.type === "text")
+                .map((part) => part.text)
+                .join("");
+              return (
+                <Message from={message.role} key={message.id}>
+                  <MessageContent
+                    className={
+                      message.role === "user"
+                        ? "group-[.is-user]:bg-accent group-[.is-user]:text-background"
+                        : ""
+                    }
+                  >
+                    <MessageResponse>{text}</MessageResponse>
+                  </MessageContent>
+                </Message>
+              );
+            })
           )}
           {status === "submitted" ? (
             <Message from="assistant">
@@ -168,11 +174,7 @@ export function ResumeAssistant() {
           rows={2}
         />
         <PromptInputFooter className="justify-end">
-          <PromptInputSubmit
-            status={status}
-            onStop={stop}
-            disabled={!busy && false}
-          />
+          <PromptInputSubmit status={status} onStop={stop} />
         </PromptInputFooter>
       </PromptInput>
     </div>
