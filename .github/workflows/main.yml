@@ -1,14 +1,13 @@
-name: Deploy Lovable app to GitHub Pages
+name: Build check
 
 on:
   push:
     branches:
       - main
+  pull_request:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 jobs:
   build:
@@ -26,17 +25,9 @@ jobs:
 
       - name: Build
         run: bun run build
+        env:
+          # Keep the same output format as Lovable hosting, regardless of CI auto-detection.
+          NITRO_PRESET: cloudflare-module
 
       - name: Verify build output
-        run: ls -la dist dist/client
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload website
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist/client
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+        run: ls -la dist dist/client dist/server
