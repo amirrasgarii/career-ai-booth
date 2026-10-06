@@ -28,6 +28,3 @@ jobs:
         env:
           # Keep the same output format as Lovable hosting, regardless of CI auto-detection.
           NITRO_PRESET: cloudflare-module
-
-      - name: Verify build output
-        run: ls -la dist dist/client dist/server
