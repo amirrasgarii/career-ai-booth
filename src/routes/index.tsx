@@ -137,16 +137,6 @@ const EDUCATION: Education[] = [
     period: "2014 — 2016",
     note: "Master's thesis: Using high-speed sampling and DSP for evaluating sensor signals — Volvo Group Trucks Technology.",
   },
-  {
-    degree: "MSc, Embedded and Intelligent Systems",
-    school: "Halmstad University",
-    period: "2013 — 2014",
-  },
-  {
-    degree: "BSc, Electrical Engineering",
-    school: "University of Zanjan, Iran",
-    period: "2008 — 2012",
-  },
 ];
 
 function SectionHeading({
