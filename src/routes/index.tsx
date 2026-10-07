@@ -6,6 +6,7 @@ import vehicleTruck from "@/assets/vehicle-truck.png";
 import vehicleScania from "@/assets/vehicle-scania.png";
 import vehicleScooter from "@/assets/vehicle-scooter.png";
 import { ResumeAssistant } from "@/components/ResumeAssistant";
+import cvAsset from "@/assets/amir-askari-cv.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
