@@ -453,7 +453,8 @@ function Index() {
               </a>
             </div>
             <a
-              href="#"
+              href={cvAsset.url}
+              download="Amir-Askari-CV.pdf"
               className="inline-flex items-center gap-3 rounded-md bg-accent px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-background transition-colors hover:bg-accent-2"
             >
               Download CV <span aria-hidden="true">↓</span>
