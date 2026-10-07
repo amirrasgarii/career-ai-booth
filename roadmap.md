@@ -9,16 +9,17 @@
 - [x] Employment periods: Volvo Cars 2015–2019, Volvo Trucks 2019–2022, Scania 2022–2023, Voi 2023–2025, Scania 2025–present (two Scania entries)
 - [x] Read Amir's LinkedIn profile (via indexed snapshot — LinkedIn itself blocks fetching) and apply verified titles
 - [ ] Confirm with Amir: name spelling Askari vs Asgari, location Stockholm vs Göteborg, current employer wording (Scania vs TRATON Group), Voi end date
-- [ ] Titles + achievements for Volvo Cars, Volvo Trucks, Scania 2022–2023; education; email; phone; CV PDF
-- [ ] Add the LLM chat assistant — later phase, waiting on user
+- [x] Titles + achievements for Volvo Cars, Volvo Trucks, Scania 2022–2023; education; email; phone; CV PDF
+- [x] Add the LLM chat assistant (built — see below)
 - [x] Scania Super image shows two cabs — regenerated as one clean tractor unit
 - [x] Fill role titles for Volvo Cars, Volvo Trucks, Scania 2022-2023 (source: CV PDF)
 - [x] CV PDF uploaded — titles + achievements applied; dates kept as user gave them
 - [x] Current Scania role: Lead Engineer, new AWS onboard/offboard calculation project (Python, AWS)
 - [x] Reorder experience newest-first, current job open by default
 - [x] Remove the name/branding visible on the vehicle image (label overlay + lettering on car/truck/Scania)
-- [ ] Wire Download CV button to the uploaded CV PDF
+- [x] Wire Download CV button to the uploaded CV PDF
 - [ ] Confirm with Amir: hero headline still "Senior Embedded System Engineer" — keep or change to Lead Engineer
 - [ ] Choose vehicle rotation style (true 360 spin / three views / tilt on mouse move) — user asked, options offered
 - [x] Build "Ask my resume" chat assistant in the reserved slot (one conversation, no saved history), grounded in the CV
 - [x] Fix assistant crash after package update (stale Vite dep cache; cleared + restarted) — re-verify chat flow
+- [x] Hide email + phone in the footer ("amir [ at ] gmail.com", "+46 [ hidden ]"); click reveals the real, clickable value + copy button
