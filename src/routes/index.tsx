@@ -6,6 +6,7 @@ import vehicleTruck from "@/assets/vehicle-truck.png";
 import vehicleScania from "@/assets/vehicle-scania.png";
 import vehicleScooter from "@/assets/vehicle-scooter.png";
 import { ResumeAssistant } from "@/components/ResumeAssistant";
+import { ContactReveal } from "@/components/ContactReveal";
 import cvAsset from "@/assets/amir-askari-cv.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -431,18 +432,20 @@ function Index() {
         <div className="mx-auto max-w-6xl px-6 py-12">
           <div className="flex flex-col justify-between gap-8 md:flex-row md:items-center">
             <div className="flex flex-wrap gap-x-10 gap-y-3 font-mono text-[12px] tracking-[0.1em]">
-              <a
-                href="mailto:amir.asgari@gmail.com"
-                className="text-foreground/80 transition-colors hover:text-accent"
-              >
-                amir.asgari@gmail.com
-              </a>
-              <a
-                href="tel:+46732178527"
-                className="text-foreground/80 transition-colors hover:text-accent"
-              >
-                +46 73 217 85 27
-              </a>
+              <ContactReveal
+                label="Email"
+                masked={["amir", "[ at ]", "gmail.com"]}
+                // "\u0040" is @ — kept out of the page source so scrapers can't match it
+                parts={["amir.asgari", "\u0040", "gmail.com"]}
+                prefix="mailto:"
+              />
+              <ContactReveal
+                label="Phone number"
+                masked={["+46", "[ hidden ]"]}
+                parts={["+46", "73", "217", "85", "27"]}
+                display="+46 73 217 85 27"
+                prefix="tel:"
+              />
               <a
                 href="https://www.linkedin.com/in/amir-askari-67bb0b8b/"
                 target="_blank"
