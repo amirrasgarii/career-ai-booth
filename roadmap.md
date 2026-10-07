@@ -23,3 +23,4 @@
 - [x] Build "Ask my resume" chat assistant in the reserved slot (one conversation, no saved history), grounded in the CV
 - [x] Fix assistant crash after package update (stale Vite dep cache; cleared + restarted) — re-verify chat flow
 - [x] Hide email + phone in the footer ("amir [ at ] gmail.com", "+46 [ hidden ]"); click reveals the real, clickable value + copy button
+- [x] Education: keep Chalmers only — removed Halmstad MSc and Zanjan BSc from the page and from the assistant's CV notes
