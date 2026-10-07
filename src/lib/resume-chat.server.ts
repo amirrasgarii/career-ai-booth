@@ -42,8 +42,6 @@ EXPERIENCE
 
 EDUCATION
 - MSc, Embedded Electronic System Design — Chalmers University of Technology, 2014 — 2016. Master's thesis: using high-speed sampling and DSP for evaluating sensor signals, at Volvo Group Trucks Technology.
-- MSc, Embedded and Intelligent Systems — Halmstad University, 2013 — 2014.
-- BSc, Electrical Engineering — University of Zanjan, Iran, 2008 — 2012.
 
 CORE SKILLS (from the work above)
 Embedded C, C++, Python, MATLAB/Simulink, Zephyr RTOS, transmission/vehicle ECUs, HMI (QML, Unity), AWS cloud services, CI-driven firmware development, electronics prototyping (Arduino, Raspberry Pi).
