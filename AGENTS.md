@@ -9,3 +9,4 @@
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
 - GitHub workflow is a build check only, not a GitHub Pages deploy — the site is server-rendered (chatbot API, no static index.html), so it must be hosted via Lovable publish.
+- CV downloads fetch and validate the asset as a PDF before saving a browser blob, so an HTML error page cannot be downloaded as the CV.

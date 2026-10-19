@@ -7,7 +7,7 @@ import vehicleScania from "@/assets/vehicle-scania.png";
 import vehicleScooter from "@/assets/vehicle-scooter.png";
 import { ResumeAssistant } from "@/components/ResumeAssistant";
 import { ContactReveal } from "@/components/ContactReveal";
-import cvAsset from "@/assets/amir-askari-cv.pdf.asset.json";
+import { CvDownload } from "@/components/CvDownload";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -445,13 +445,7 @@ function Index() {
                 linkedin.com/in/amir-askari
               </a>
             </div>
-            <a
-              href={cvAsset.url}
-              download="Amir-Askari-CV.pdf"
-              className="inline-flex items-center gap-3 rounded-md bg-accent px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-background transition-colors hover:bg-accent-2"
-            >
-              Download CV <span aria-hidden="true">↓</span>
-            </a>
+            <CvDownload />
           </div>
           <div className="mt-10 flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.25em] text-faint">
             <span>© 2026 A. Askari</span>
