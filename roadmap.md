@@ -19,6 +19,7 @@
 - [x] Remove the name/branding visible on the vehicle image (label overlay + lettering on car/truck/Scania)
 - [x] Wire Download CV button to the uploaded CV PDF
 - [x] Prevent CV download from saving an HTML page; validate and download the actual PDF.
+- [x] Remove unused diagram rendering that causes the graphlib blank-screen crash.
 - [ ] Confirm with Amir: hero headline still "Senior Embedded System Engineer" — keep or change to Lead Engineer
 - [ ] Choose vehicle rotation style (true 360 spin / three views / tilt on mouse move) — user asked, options offered
 - [x] Build "Ask my resume" chat assistant in the reserved slot (one conversation, no saved history), grounded in the CV
