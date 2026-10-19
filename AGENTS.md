@@ -10,4 +10,4 @@
 <!-- LOVABLE:END -->
 - GitHub workflow is a build check only, not a GitHub Pages deploy — the site is server-rendered (chatbot API, no static index.html), so it must be hosted via Lovable publish.
 - CV downloads fetch and validate the asset as a PDF before saving a browser blob, so an HTML error page cannot be downloaded as the CV.
-- Resume chat renders Markdown without installing or importing the Mermaid plugin; keep its diagram/graphlib dependency tree out of the app to prevent initialization crashes.
+- Resume chat uses react-markdown with remark-gfm, not Streamdown or Mermaid; a Markdown-only dependency tree prevents diagram/graphlib initialization crashes.
