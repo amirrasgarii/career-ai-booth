@@ -12,9 +12,6 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
-import { cjk } from "@streamdown/cjk";
-import { code } from "@streamdown/code";
-import { math } from "@streamdown/math";
 import type { UIMessage } from "ai";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import type { ComponentProps, HTMLAttributes, ReactElement } from "react";
@@ -27,7 +24,8 @@ import {
   useMemo,
   useState,
 } from "react";
-import { Streamdown } from "streamdown";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 export type MessageProps = HTMLAttributes<HTMLDivElement> & {
   from: UIMessage["role"];
@@ -318,26 +316,27 @@ export const MessageBranchPage = ({
   );
 };
 
-export type MessageResponseProps = ComponentProps<typeof Streamdown>;
+export type MessageResponseProps = HTMLAttributes<HTMLDivElement> & {
+  children: string;
+};
 
-// Resume answers need Markdown, not diagram rendering. Keep Mermaid's
-// graphlib dependency out of the page's client module graph.
-const streamdownPlugins = { cjk, code, math };
+// A Markdown-only renderer has no diagram engine or graphlib import path.
+const markdownPlugins = [remarkGfm];
 
 export const MessageResponse = memo(
-  ({ className, ...props }: MessageResponseProps) => (
-    <Streamdown
+  ({ className, children, ...props }: MessageResponseProps) => (
+    <div
       className={cn(
-        "size-full [&>*:first-child]:mt-0 [&>*:last-child]:mb-0",
+        "size-full break-words [&>*:first-child]:mt-0 [&>*:last-child]:mb-0 [&_p]:my-3 [&_ul]:my-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:my-3 [&_ol]:list-decimal [&_ol]:pl-5 [&_a]:text-accent [&_a]:underline [&_pre]:overflow-x-auto [&_pre]:bg-muted [&_pre]:p-3",
         className
       )}
-      plugins={streamdownPlugins}
       {...props}
-    />
-  ),
-  (prevProps, nextProps) =>
-    prevProps.children === nextProps.children &&
-    nextProps.isAnimating === prevProps.isAnimating
+    >
+      <ReactMarkdown remarkPlugins={markdownPlugins} skipHtml>
+        {children}
+      </ReactMarkdown>
+    </div>
+  )
 );
 
 MessageResponse.displayName = "MessageResponse";
