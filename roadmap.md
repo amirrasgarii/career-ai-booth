@@ -28,3 +28,6 @@
 - [x] Fix assistant crash after package update (stale Vite dep cache; cleared + restarted) — re-verify chat flow
 - [x] Hide email + phone in the footer ("amir [ at ] gmail.com", "+46 [ hidden ]"); click reveals the real, clickable value + copy button
 - [x] Education: keep Chalmers only — removed Halmstad MSc and Zanjan BSc from the page and from the assistant's CV notes
+- [x] Re-upload CV PDF → byte-identical to the connected asset; preview download verified as a real PDF
+- [ ] Republish the site so the working Download CV button reaches the live URL (live site still serves the old broken link)
+- [ ] Ask Amir: CV PDF still lists Halmstad + Zanjan, old titles/years (Volvo Cars 2016–2019, Voi 2023–2024, Scania "Senior" 2022–Present), DOB and home address — refresh the PDF or leave as-is?
